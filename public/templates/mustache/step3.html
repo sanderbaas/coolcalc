@@ -1,0 +1,40 @@
+<div class="panel panel-default">
+  <div class="panel-heading">{{model.post_title}}</div>
+  <div class="list-group">
+    <div class="list-group-item">
+      <p class="list-group-item-text">{{l10n.col_capacity}}: {{model.meta.capacity}}kW</p>
+      {{#model.image}}
+      <p class="list-group-item-text">
+        <img class="center-block img-responsive" src="{{model.image}}">
+      </p>
+      {{/model.image}}
+      <p class="list-group-item-text">{{& model.post_content}}</p>
+    </div>
+  </div>
+</div>
+{{#hasOptions}}
+<div class="panel panel-default step3-scroll">
+  <div class="panel-heading">Meerprijzen</div>
+    <div class="list-group">
+      {{#options}}
+      <div class="list-group-item">
+        <p class="list-group-item-heading">{{post_title}}</p>
+        <p class="list-group-item-text">{{& post_content_html}}</p>
+      </div>
+      {{/options}}
+  </div>
+</div>
+{{/hasOptions}}
+{{#hasInstallOptions}}
+<div class="panel panel-default step3-scroll">
+  <div class="panel-heading">Installatie-opties</div>
+    <div class="list-group">
+      {{#installOptions}}
+      <div class="list-group-item">
+        <p class="list-group-item-heading">{{post_title}}</p>
+        <p class="list-group-item-text">{{& post_content_html}}</p>
+      </div>
+      {{/installOptions}}
+  </div>
+</div>
+{{/hasInstallOptions}}

@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Kies meerprijs opties</div>
+    {{#options}}
+    <a href="#" class="list-group-item step2-item {{#selected}}active{{/selected}}" data-cid="{{ID}}">
+      <p class="list-group-item-heading"><i class="fa fa-{{#selected}}check-{{/selected}}square-o"></i> {{post_title}} {{#hasContent}}<span class="info" data-featherlight="<p class='infoblock'>{{post_content_html}}</p>"><span>?</span></span>{{/hasContent}}</p>
+    </a>
+    {{/options}}
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">Kies installatie opties</div>
+    {{#installOptions}}
+    <a href="#" class="list-group-item step2b-item {{#selected}}active{{/selected}}" data-cid="{{ID}}">
+      <p class="list-group-item-heading"><i class="fa fa-{{#selected}}check-{{/selected}}square-o"></i> {{post_title}} {{#hasContent}}<span class="info" data-featherlight="<p class='infoblock'>{{post_content_html}}</p>"><span>?</span></span>{{/hasContent}}</p>
+    </a>
+    {{/installOptions}}
+  </div>
+</div>

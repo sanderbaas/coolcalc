@@ -1,0 +1,95 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Koelmachine</div>
+  <table class="table">
+    <tbody>
+      {{#models}}
+        {{#selected}}
+        <tr>
+          <td><h4>{{post_title}}</h4></td>
+          <td class="text-right"><h4>&euro;&nbsp;{{modelPrice}}</h4></td>
+        </tr>
+        {{/selected}}
+    {{/models}}
+    </tbody>
+  </table>
+</div>
+{{#showOptions}}
+<div class="panel panel-default">
+  <div class="panel-heading">Meerprijzen</div>
+  <table class="table">
+    <tbody>
+      {{#options}}
+        {{#selected}}
+          <tr>
+            <td>{{post_title}}</td>
+            <td class="text-right">&euro;&nbsp;{{meta.price_f}}</td>
+          </tr>
+        {{/selected}}
+      {{/options}}
+      <tr>
+        <td>TOTAAL</td>
+        <td class="text-right">&euro;&nbsp;{{optionsPrice}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{{/showOptions}}
+{{#showInstallOptions}}
+<div class="panel panel-default">
+  <div class="panel-heading">Installatieprijzen</div>
+  <table class="table">
+    <tbody>
+      {{#installOptions}}
+        {{#selected}}
+          <tr>
+            <td>{{post_title}}</td>
+            <td class="text-right">&euro;&nbsp;{{meta.price_f}}</td>
+          </tr>
+        {{/selected}}
+      {{/installOptions}}
+      <tr>
+        <td>TOTAAL</td>
+        <td class="text-right">&euro;&nbsp;{{installOptionsPrice}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{{/showInstallOptions}}
+<div class="panel panel-default">
+  <div class="panel-heading">BTW en totalen</div>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>Totaal (excl. BTW)</td>
+        <td class="text-right">&euro;&nbsp;{{totalPrice}}</td>
+      </tr>
+      <tr>
+        <td>BTW</td>
+        <td class="text-right">&euro;&nbsp;{{tax}}</td>
+      </tr>
+      <tr>
+        <td>Totaal (incl. BTW)</td>
+        <td class="text-right">&euro;&nbsp;{{totalInclPrice}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="panel panel-default">
+  <div class="list-group">
+    {{#models}}
+      {{#selected}}
+      <div class="list-group-item">
+        <h4 class="list-group-item-heading">{{post_title}}</h4>
+        <p class="list-group-item-text">Koelvermogen: {{meta.capacity}}kW</p>
+        {{^hideImage}}
+          {{#image}}
+          <p class="list-group-item-text">
+            <img class="center-block img-responsive" src="{{image}}">
+          </p>
+          {{/image}}
+        {{/hideImage}}
+      </div>
+      {{/selected}}
+    {{/models}}
+  </div>
+</div>

@@ -1,0 +1,49 @@
+/* This stylesheet is used to style the custom stuff option form of the plugin. */
+.required td:first-child:after {
+  content:" *";
+}
+
+table.meta-box tr input {
+  width:100%;
+}
+
+.form-field input[type=checkbox],
+.form-field input[type=radio],
+table.meta-box tr input[type=checkbox],
+table.meta-box tr input[type=radio] {
+  width:auto;
+}
+
+table.meta-box tr input.input_price {
+  width:150px;
+}
+
+table.meta-box td {
+  vertical-align: top;
+}
+
+table.form-table tr.multiple select {
+  width:500px;
+  height:200px;
+}
+
+ul.advanced_select {
+  display:block;
+  width:100%;
+  float:left;
+}
+
+.form-table h4 {
+  width:100%;
+  display:block;
+  float:left;
+}
+
+ul.advanced_select li {
+  float:left;
+  width:25%;
+}
+
+ul.advanced_select li.checked {
+  
+}

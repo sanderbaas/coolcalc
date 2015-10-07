@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Kies een model</div>
+  <div class="list-group">
+    {{#models}}
+    <a href="#" class="list-group-item step1-item {{#selected}}active{{/selected}}" data-cid="{{ID}}">
+      <p class="list-group-item-heading">{{post_title}}</p>
+      <p class="list-group-item-text">{{l10n.col_capacity}}: {{meta.capacity}} kW
+      </p>
+    </a>
+    {{/models}}
+  </div>
+</div>
